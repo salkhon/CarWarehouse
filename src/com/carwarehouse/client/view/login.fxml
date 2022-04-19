@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.carwarehouse.client.controller.LoginController">
+   <top>
+      <Label prefHeight="33.0" prefWidth="82.0" text="Car Warehouse" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="331.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <fx:define>
+                  <ToggleGroup fx:id="userModeToggleGroup" />
+               </fx:define>
+               <children>
+                  <RadioButton fx:id="viewerToggle" mnemonicParsing="false" text="Viewer" toggleGroup="$userModeToggleGroup"/>
+                  <RadioButton fx:id="manufacturerToggle" mnemonicParsing="false" text="Manufacturer" toggleGroup="$userModeToggleGroup" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="4.0" prefWidth="600.0" spacing="30.0">
+               <children>
+                  <Label text="Username" />
+                  <TextField fx:id="usernameTextField" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Label text="Password" />
+                  <PasswordField fx:id="passwordField" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Button fx:id="enterButton" mnemonicParsing="false" onAction="#enterButtonHandle" text="Enter" />
+               </children>
+            </HBox>
+            <Label fx:id="invalidLoginLabel" alignment="CENTER" contentDisplay="CENTER" text="Invalid Login" textFill="#e21111" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
