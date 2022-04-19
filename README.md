@@ -6,14 +6,14 @@ A UI based implementation of multithreaded Client-Server networking using socket
 This project has a client application and a server application. 
 
 ### Server
-![server]()
+![server](https://github.com/salkhon/CarWarehouse/blob/master/src/com/carwarehouse/icons/server.png)
 
 The server holds information about clients and various cars along with their images. It accepts connection from 
 multiple clients. 
 
 
 ### Client
-![client]()
+![client](https://github.com/salkhon/CarWarehouse/blob/master/src/com/carwarehouse/icons/client.png)
 
 The client applications can view those data fetched from the server using sockets. Clients can also modify 
 the server data in a **thread-safe** manner. They can search cars by make, model, and registration number. 
